@@ -11,22 +11,14 @@
         <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     </head>
-    <body onload="">
-        <div>Página Inicial</div>
-
+    <body>
+        <h1>Acceso con Auth02</h1>
         <div class="container unauthenticated">
             Registro Con GitHub: <a href="/oauth2/authorization/github">click here</a>
         </div>
-        <div class="container authenticated">
-            Registrado como: <span id="user"></span>
-            <p id="aplica">
-                Iniciar Aplicación: <a href="/inicio.html">Aquí</a>
-            </p>
-            <div>
-                <button onclick="logout()" class="btn btn-primary">Logout</button>
-            </div>
+        <div class="container authenticated" style="display:none">
+            Registrado con el usuario de: <span id="user"></span>
         </div>
-
         <script type="text/javascript">
             $.get("/user", function (data) {
                 $("#user").html(data.name);
@@ -35,16 +27,5 @@
             });
         </script>
 
-        <script type="text/javascript">
-            var logout = function () {
-                $.post("/logout", function () {
-                    $("#user").html('');
-                    $(".unauthenticated").hide();
-                    $(".authenticated").show();
-                });
-            }
-        </script>
-
     </body>
 </html>
-
