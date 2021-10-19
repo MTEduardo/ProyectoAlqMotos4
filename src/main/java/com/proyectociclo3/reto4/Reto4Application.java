@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Reto4Application {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		SpringApplication.run(Reto4Application.class, args);
 	}
 
