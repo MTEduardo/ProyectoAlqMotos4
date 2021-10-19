@@ -9,13 +9,13 @@
     <body style="background-color:#e2f8f8; FONT-FAMILY: Verdana">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="js/misFunciones.js"></script>
-        <h1>Panel Categorías <img src="categorias_logo_xxs.png" align="center"> </h1>
+        <h1>Panel Clientes <img src="usuarios_logo_xxs.png" align="center"> </h1>
         <h2> <button onclick="location.href = 'inicio.html'" style="width:180px; height:28px; FONT-SIZE: 12pt" >.:: Volver al Menú ::.</button> </h2>
         <div id="resultado"></div>
-        <input type ="button" onclick="traerInformacionCategoria()" title="Listar Categorías" value="Listar Categorías">
+        <input type ="button" onclick="traerInformacionCliente()" title="Listar Clientes" value="Listar Clientes">
 
         <style>
-            tablaCategorias{
+            tablaClientes{
                 border-collapse: collapse;
                 border-spacing: 0;
             }
@@ -26,15 +26,17 @@
         </style>
 
         <div>
-            <input type="number" id="id" placeholder="ID Categoría" style="width:110px">
+            <input type="number" id="idClient" placeholder="ID Cliente" style="width:110px">
+            <input type="text" id="email" placeholder="E-Mail" style="width:260px">
+            <input type="text" id="password" placeholder="Contraseña" style="width:200px">
             <input type="text" id="name" placeholder="Nombre" style="width:210px">
-            <input type="text" id="description" placeholder="Descripción" style="width:250px">
+            <input type="number" id="age" placeholder="Edad" style="width:100px">
         </div>
 
         <br>
-        <button onclick="guardarInformacionCategoria()">Guardar</button>
-        <button onclick="actualizarInformacionCategoria()">Actualizar</button>
-        <button onclick="limpiarCamposCategoria()">Limpiar</button>
+        <button onclick="guardarInformacionCliente()">Guardar</button>
+        <button onclick="actualizarInformacionCliente()">Actualizar</button>
+        <button onclick="limpiarCamposCliente()">Limpiar</button>
 
     </body>
 </html>

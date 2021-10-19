@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Proyecto: Alquiler de Moto</title>
     </head>
-    <body style="background-color:#e2f8f8; FONT-FAMILY: Verdana">
+    <body onload="listarClientes(); listarMotos()" style="background-color:#e2f8f8; FONT-FAMILY: Verdana">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="js/misFunciones.js"></script>
-        <h1>Panel Categorías <img src="categorias_logo_xxs.png" align="center"> </h1>
+        <h1>Panel Mensajes <img src="mensajes_logo_xxs.png" align="center"> </h1>
         <h2> <button onclick="location.href = 'inicio.html'" style="width:180px; height:28px; FONT-SIZE: 12pt" >.:: Volver al Menú ::.</button> </h2>
         <div id="resultado"></div>
-        <input type ="button" onclick="traerInformacionCategoria()" title="Listar Categorías" value="Listar Categorías">
+        <input type ="button" onclick="traerInformacionMensaje()" title="Listar Mensajes" value="Listar Mensajes">
 
         <style>
-            tablaCategorias{
+            tablaMensajes{
                 border-collapse: collapse;
                 border-spacing: 0;
             }
@@ -26,15 +26,18 @@
         </style>
 
         <div>
-            <input type="number" id="id" placeholder="ID Categoría" style="width:110px">
-            <input type="text" id="name" placeholder="Nombre" style="width:210px">
-            <input type="text" id="description" placeholder="Descripción" style="width:250px">
+            <input type="number" id="idMessage" placeholder="ID Mensaje" style="width:110px">
+            <input type="text" id="messageText" placeholder="Texto del Mensaje" style="width:550px">
+            <select id="clientsList" required></select>
+            <select id="motorbikesList" required></select>
         </div>
 
         <br>
-        <button onclick="guardarInformacionCategoria()">Guardar</button>
-        <button onclick="actualizarInformacionCategoria()">Actualizar</button>
-        <button onclick="limpiarCamposCategoria()">Limpiar</button>
+        <button onclick="guardarInformacionMensaje()">Guardar</button>
+        <button onclick="actualizarInformacionMensaje()">Actualizar</button>
+        <button onclick="limpiarCamposMensaje()">Limpiar</button>
 
     </body>
 </html>
+
+
