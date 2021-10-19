@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <title>Demo</title>
-        <meta name="description" content=""/>
-        <meta name="viewport" content="width=device-width"/>
-        <base href="/"/>
-        <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
-        <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <h1>Acceso con Auth02</h1>
-        <div class="container unauthenticated">
-            Registro Con GitHub: <a href="/oauth2/authorization/github">click here</a>
-        </div>
-        <div class="container authenticated" style="display:none">
-            Registrado con el usuario de: <span id="user"></span>
-        </div>
-        <script type="text/javascript">
-            $.get("/user", function (data) {
-                $("#user").html(data.name);
-                $(".unauthenticated").hide()
-                $(".authenticated").show()
-            });
-        </script>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="application/json" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto: Alquiler de Moto</title>
+</head>
+<body style="background-color:#e2f8f8; FONT-FAMILY: Verdana">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/misFunciones.js"></script>
+	<center> <h1 style="FONT-SIZE: 30pt">Alquiler de Motos EyP</h1> </center>
+    <center><img src="moto_logo.png" width="90" ></center>
+    <h2 style="FONT-SIZE: 16pt; color:#000099"> Menú de Navegación:</h2>
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="location.href='P_Categorias.html'" style="width:150px; height:30px; FONT-SIZE: 12pt" >Categorías</button> </h2>
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="location.href='P_Moto.html'" style="width:150px; height:30px; FONT-SIZE: 12pt" >Motos</button> </h2>
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="location.href='P_Clientes.html'" style="width:150px; height:30px; FONT-SIZE: 12pt" >Clientes</button> </h2>
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="location.href='P_Mensajes.html'" style="width:150px; height:30px; FONT-SIZE: 12pt" >Mensajes</button> </h2>
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="location.href='P_Reservaciones.html'" style="width:150px; height:30px; FONT-SIZE: 12pt" >Reservaciones</button> </h2>
 
-    </body>
+</body>
 </html>

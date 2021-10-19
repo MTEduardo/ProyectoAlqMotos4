@@ -1,34 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <title>Demo</title>
-        <meta name="description" content=""/>
-        <meta name="viewport" content="width=device-width"/>
-        <base href="/"/>
+        <title>Inicio de Sesión</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
         <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    </head>
-    <body onload="">
-        <div>Página Inicial</div>
-
+</head>
+    <body onLoad="">
+        <div>Pagina Inicial</div>
+        
         <div class="container unauthenticated">
-            Registro Con GitHub: <a href="/oauth2/authorization/github">click here</a>
+             Registro con GitHub: <a href="/oauth2/authorization/github">click here</a>
         </div>
         <div class="container authenticated">
             Registrado como: <span id="user"></span>
-            <p id="aplica">
-                Iniciar Aplicación: <a href="/inicio.html">Aquí</a>
+            <p id="aplica" >
+                Iniciar aplicacion <a href="/inicio.html">Aqu�</a>
             </p>
-            <div>
-                <button onclick="logout()" class="btn btn-primary">Logout</button>
-            </div>
+        <div>
+            <button onClick="logout()" class="btn btn-primary">Logout</button>
         </div>
-
-        <script type="text/javascript">
-            $.get("/user", function (data) {
+        </div>
+        
+       <script type="text/javascript">
+            $.get("/user", function(data) {
                 $("#user").html(data.name);
                 $(".unauthenticated").hide()
                 $(".authenticated").show()
@@ -36,15 +33,15 @@
         </script>
 
         <script type="text/javascript">
-            var logout = function () {
-                $.post("/logout", function () {
-                    $("#user").html('');
-                    $(".unauthenticated").hide();
-                    $(".authenticated").show();
-                });
-            }
+            var logout = function() {
+          $.post("/logout", function() {
+              $("#user").html('');
+              $(".unauthenticated").show();
+              $(".authenticated").hide();
+          })
+          return true;
+          }   
         </script>
 
     </body>
 </html>
-

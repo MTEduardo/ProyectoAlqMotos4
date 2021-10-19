@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="application/json">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto: Alquiler de Moto</title>
+</head>
+
+<body onload="listarCategorias()" style="background-color:#e2f8f8; FONT-FAMILY: Verdana">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+    <h1>Panel Motocicletas <img src="moto_logo_xxs.png" align="center"> </h1>
+    <h2> <button onclick="location.href='index.html'" style="width:180px; height:28px; FONT-SIZE: 12pt">.:: Volver al Menú ::.</button> </h2>
+    <div id="resultado"></div>
+    <input type="button" onclick="traerInformacionMoto()" title="Listar Motos" value="Listar Motos">
+
+    <style>
+        tablaMoto {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        th,
+        td {
+            padding: 2px 10px;
+            border: 1px solid #000;
+        }
+    </style>
+
+    <div>
+        <input type="number" id="id" placeholder="ID Moto" style="width:95px">
+        <input type="text" id="name" placeholder="Nombre" style="width:160px">
+        <input type="text" id="brand" placeholder="Marca" style="width:160px">
+        <input type="number" id="year" placeholder="Año" style="width:100px">
+        <input type="text" id="description" placeholder="Descripción" style="width:260px">
+        <select id="categoriesList" required></select>
+    </div>
+
+    <br>
+    <button onclick="guardarInformacionMoto()">Guardar</button>
+    <button onclick="actualizarInformacionMoto()">Actualizar</button>
+    <button onclick="limpiarCamposMoto()">Limpiar</button>
+
+</body>
+
+</html>
