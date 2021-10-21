@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="application/json">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Proyecto: Alquiler de Moto</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="application/json">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto: Alquiler de Moto</title>
+</head>
 
-    <body onload="listarClientes(); listarMotos()" style="background-color:#e2f8f8; FONT-FAMILY: Verdana">
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="js/misFunciones.js"></script>
-        <h1>Panel Reservaciones <img src="reservacion_logo_xxs.png" align="center"> </h1>
-        <h2> <button onclick="location.href = 'inicio.html'" style="width:180px; height:28px; FONT-SIZE: 12pt">.:: Volver al Menú ::.</button> </h2>
-        <div id="resultado"></div>
-        <input type="button" onclick="traerInformacionReservacion()" title="Listar Reservaciones"
-               value="Listar Reservaciones">
+<body onload="listarClientes(); listarMotos()" style="background-color:#e2f8f8; FONT-FAMILY: Verdana">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+    <h1>Panel Reservaciones <img src="reservacion_logo_xxs.png" align="center"> </h1>
+    <h2> <button onclick="location.href='inicio.html'" style="width:180px; height:28px; FONT-SIZE: 12pt">.:: Volver al Menú ::.</button> </h2>
+    <div id="resultado"></div>
+    <input type="button" onclick="traerInformacionReservacion()" title="Listar Reservaciones"
+        value="Listar Reservaciones">
 
-        <style>
-            tablaReservaciones {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
+    <style>
+        tablaReservaciones {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
 
-            th,
-            td {
-                padding: 2px 10px;
-                border: 1px solid #000;
-            }
-        </style>
+        th,
+        td {
+            padding: 2px 10px;
+            border: 1px solid #000;
+        }
+    </style>
 
-        <div>
-            <input type="number" id="idReservation" placeholder="ID Reservación" style="width:120px">
-            <input type="date" id="startDate" placeholder="Fecha Inicio" style="width:140px">
-            <input type="date" id="devolutionDate" placeholder="Fecha Devolución" style="width:140px">
-            <select id="clientsList" required></select>
-            <select id="motorbikesList" required></select>
-        </div>
+    <div>
+        <input type="number" id="idReservation" placeholder="ID Reservación" style="width:120px">
+        <input type="date" id="startDate" placeholder="Fecha Inicio" style="width:140px">
+        <input type="date" id="devolutionDate" placeholder="Fecha Devolución" style="width:140px">
+        <select id="clientsList" required></select>
+        <select id="motorbikesList" required></select>
+    </div>
 
-        <br>
-        <button onclick="guardarInformacionReservacion()">Guardar</button>
-        <button onclick="actualizarInformacionReservacion()">Actualizar</button>
-        <button onclick="limpiarCamposReservacion()">Limpiar</button>
+    <br>
+    <button onclick="guardarInformacionReservacion()">Guardar</button>
+    <button onclick="actualizarInformacionReservacion()">Actualizar</button>
+    <button onclick="limpiarCamposReservacion()">Limpiar</button>
 
-    </body>
+</body>
 
 </html>

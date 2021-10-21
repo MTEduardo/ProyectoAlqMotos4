@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="application/json" >
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Proyecto: Alquiler de Moto</title>
-    </head>
-    <body style="background-color:#e2f8f8; FONT-FAMILY: Verdana">
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="js/misFunciones.js"></script>
-        <h1>Panel Clientes <img src="usuarios_logo_xxs.png" align="center"> </h1>
-        <h2> <button onclick="location.href = 'inicio.html'" style="width:180px; height:28px; FONT-SIZE: 12pt" >.:: Volver al Menú ::.</button> </h2>
-        <div id="resultado"></div>
-        <input type ="button" onclick="traerInformacionCliente()" title="Listar Clientes" value="Listar Clientes">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="application/json" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto: Alquiler de Moto</title>
+</head>
+<body style="background-color:#e2f8f8; FONT-FAMILY: Verdana">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/misFunciones.js"></script>
+    <h1>Panel Clientes <img src="usuarios_logo_xxs.png" align="center"> </h1>
+    <h2> <button onclick="location.href='inicio.html'" style="width:180px; height:28px; FONT-SIZE: 12pt" >.:: Volver al Menú ::.</button> </h2>
+    <div id="resultado"></div>
+    <input type ="button" onclick="traerInformacionCliente()" title="Listar Clientes" value="Listar Clientes">
 
-        <style>
-            tablaClientes{
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            th, td{
-                padding: 2px 10px;
-                border: 1px solid #000;
-            }
-        </style>
+    <style>
+    tablaClientes{
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    th, td{
+        padding: 2px 10px;
+        border: 1px solid #000;
+    }
+    </style>
 
-        <div>
-            <input type="number" id="idClient" placeholder="ID Cliente" style="width:110px">
-            <input type="text" id="email" placeholder="E-Mail" style="width:260px">
-            <input type="text" id="password" placeholder="Contraseña" style="width:200px">
-            <input type="text" id="name" placeholder="Nombre" style="width:210px">
-            <input type="number" id="age" placeholder="Edad" style="width:100px">
-        </div>
+    <div>
+       <input type="number" id="idClient" placeholder="ID Cliente" style="width:110px">
+       <input type="text" id="email" placeholder="E-Mail" style="width:260px">
+       <input type="text" id="password" placeholder="Contraseña" style="width:200px">
+       <input type="text" id="name" placeholder="Nombre" style="width:210px">
+       <input type="number" id="age" placeholder="Edad" style="width:100px">
+    </div>
 
-        <br>
-        <button onclick="guardarInformacionCliente()">Guardar</button>
-        <button onclick="actualizarInformacionCliente()">Actualizar</button>
-        <button onclick="limpiarCamposCliente()">Limpiar</button>
+    <br>
+    <button onclick="guardarInformacionCliente()">Guardar</button>
+    <button onclick="actualizarInformacionCliente()">Actualizar</button>
+    <button onclick="limpiarCamposCliente()">Limpiar</button>
 
-    </body>
+</body>
 </html>

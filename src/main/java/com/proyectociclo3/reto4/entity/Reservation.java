@@ -8,8 +8,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 @Table(name = "Reservation")
@@ -29,7 +32,9 @@ public class Reservation implements Serializable {
     @JoinColumn(name = "clientId")
     @JsonIgnoreProperties({"reservations", "messages"})
     private Client client;
-    private String score;
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "reservation")
+    @JsonIgnoreProperties("reservation")
+    public List<Score> score;
 
     public Integer getIdReservation() {
         return idReservation;
@@ -71,14 +76,6 @@ public class Reservation implements Serializable {
         this.motorbike = motorbike;
     }
 
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
-        this.score = score;
-    }
-
     public Client getClient() {
         return client;
     }
@@ -87,4 +84,12 @@ public class Reservation implements Serializable {
         this.client = client;
     }
 
+    public List<Score> getScore() {
+        return score;
+    }
+
+    public void setScore(List<Score> score) {
+        this.score = score;
+    }
+    
 }

@@ -1,7 +1,7 @@
 //Funciones para el manejo de la tabla MOTO:
 function traerInformacionMoto() {
     $.ajax({
-        url: 'http://129.151.118.73/api/Motorbike/all',
+        url: 'http://localhost/api/Motorbike/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -57,7 +57,7 @@ function guardarInformacionMoto() {
         alert(".::ERROR::. Debes seleccionar una categoría!");
     } else {
         $.ajax(
-                'http://129.151.118.73/api/Motorbike/save',
+                'http://localhost/api/Motorbike/save',
                 {
                     data: datosJson,
                     type: 'POST',
@@ -82,7 +82,7 @@ function guardarInformacionMoto() {
 
 function editarRegistroMoto(idMoto) {
     $.ajax({
-        url: 'http://129.151.118.73/api/Motorbike/' + idMoto,
+        url: 'http://localhost/api/Motorbike/' + idMoto,
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -118,7 +118,7 @@ function actualizarInformacionMoto() {
         alert(".::ERROR::. Debes seleccionar una categoría!");
     } else {
         $.ajax(
-                'http://129.151.118.73/api/Motorbike/update',
+                'http://localhost/api/Motorbike/update',
                 {
                     data: datosJson,
                     type: 'PUT',
@@ -143,7 +143,7 @@ function actualizarInformacionMoto() {
 
 function eliminarRegistroMoto(idMoto) {
     $.ajax(
-            'http://129.151.118.73/api/Motorbike/' + idMoto,
+            'http://localhost/api/Motorbike/' + idMoto,
             {
                 type: 'DELETE',
                 dataType: 'json',
@@ -171,7 +171,7 @@ function limpiarCamposMoto() {
 //Funciones para el manejo de la tabla CATEGORÍAS:
 function traerInformacionCategoria() {
     $.ajax({
-        url: 'http://129.151.118.73/api/Category/all',
+        url: 'http://localhost/api/Category/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -215,7 +215,7 @@ function guardarInformacionCategoria() {
     };
     let datosJson = JSON.stringify(datosCategorias);
     $.ajax(
-            'http://129.151.118.73/api/Category/save',
+            'http://localhost/api/Category/save',
             {
                 data: datosJson,
                 type: 'POST',
@@ -236,7 +236,7 @@ function guardarInformacionCategoria() {
 
 function editarRegistroCategoria(idCategoria) {
     $.ajax({
-        url: 'http://129.151.118.73/api/Category/' + idCategoria,
+        url: 'http://localhost/api/Category/' + idCategoria,
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -262,7 +262,7 @@ function actualizarInformacionCategoria() {
     };
     let datosJson = JSON.stringify(datosCategoria);
     $.ajax(
-            'http://129.151.118.73/api/Category/update',
+            'http://localhost/api/Category/update',
             {
                 data: datosJson,
                 type: 'PUT',
@@ -283,7 +283,7 @@ function actualizarInformacionCategoria() {
 
 function eliminarRegistroCategoria(idCategoria) {
     $.ajax(
-            'http://129.151.118.73/api/Category/' + idCategoria,
+            'http://localhost/api/Category/' + idCategoria,
             {
                 type: 'DELETE',
                 dataType: 'json',
@@ -308,7 +308,7 @@ function limpiarCamposCategoria() {
 //Funciones para el manejo de la tabla CLIENTE:
 function traerInformacionCliente() {
     $.ajax({
-        url: 'http://129.151.118.73/api/Client/all',
+        url: 'http://localhost/api/Client/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -358,7 +358,7 @@ function guardarInformacionCliente() {
     };
     let datosJson = JSON.stringify(datosCliente);
     $.ajax(
-            'http://129.151.118.73/api/Client/save',
+            'http://localhost/api/Client/save',
             {
                 data: datosJson,
                 type: 'POST',
@@ -381,7 +381,7 @@ function guardarInformacionCliente() {
 
 function editarRegistroCliente(idCliente) {
     $.ajax({
-        url: 'http://129.151.118.73/api/Client/' + idCliente,
+        url: 'http://localhost/api/Client/' + idCliente,
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -409,7 +409,7 @@ function actualizarInformacionCliente() {
     };
     let datosJson = JSON.stringify(datosCliente);
     $.ajax(
-            'http://129.151.118.73/api/Client/update',
+            'http://localhost/api/Client/update',
             {
                 data: datosJson,
                 type: 'PUT',
@@ -432,7 +432,7 @@ function actualizarInformacionCliente() {
 
 function eliminarRegistroCliente(idCliente) {
     $.ajax(
-            'http://129.151.118.73/api/Client/' + idCliente,
+            'http://localhost/api/Client/' + idCliente,
             {
                 type: 'DELETE',
                 dataType: 'json',
@@ -459,7 +459,7 @@ function limpiarCamposCliente() {
 //Funciones para el manejo de la tabla MENSAJE:
 function traerInformacionMensaje() {
     $.ajax({
-        url: 'http://129.151.118.73/api/Message/all',
+        url: 'http://localhost/api/Message/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -514,7 +514,7 @@ function guardarInformacionMensaje() {
             alert(".::ERROR::. Debes seleccionar una moto!");
         } else {
             $.ajax(
-                    'http://129.151.118.73/api/Message/save',
+                    'http://localhost/api/Message/save',
                     {
                         data: datosJson,
                         type: 'POST',
@@ -538,7 +538,7 @@ function guardarInformacionMensaje() {
 
 function editarRegistroMensaje(idMensaje) {
     $.ajax({
-        url: 'http://129.151.118.73/api/Message/' + idMensaje,
+        url: 'http://localhost/api/Message/' + idMensaje,
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -574,7 +574,7 @@ function actualizarInformacionMensaje() {
             alert(".::ERROR::. Debes seleccionar una moto!");
         } else {
             $.ajax(
-                    'http://129.151.118.73/api/Message/update',
+                    'http://localhost/api/Message/update',
                     {
                         data: datosJson,
                         type: 'PUT',
@@ -598,7 +598,7 @@ function actualizarInformacionMensaje() {
 
 function eliminarRegistroMensaje(idMensaje) {
     $.ajax(
-            'http://129.151.118.73/api/Message/' + idMensaje,
+            'http://localhost/api/Message/' + idMensaje,
             {
                 type: 'DELETE',
                 dataType: 'json',
@@ -624,7 +624,7 @@ function limpiarCamposMensaje() {
 //Funciones para el manejo de la tabla RESERVACIONES:
 function traerInformacionReservacion() {
     $.ajax({
-        url: 'http://129.151.118.73/api/Reservation/all',
+        url: 'http://localhost/api/Reservation/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -684,7 +684,7 @@ function guardarInformacionReservacion() {
             alert(".::ERROR::. Debes seleccionar una moto!");
         } else {
             $.ajax(
-                    'http://129.151.118.73/api/Reservation/save',
+                    'http://localhost/api/Reservation/save',
                     {
                         data: datosJson,
                         type: 'POST',
@@ -709,7 +709,7 @@ function guardarInformacionReservacion() {
 
 function editarRegistroReservacion(idReservacion) {
     $.ajax({
-        url: 'http://129.151.118.73/api/Reservation/' + idReservacion,
+        url: 'http://localhost/api/Reservation/' + idReservacion,
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -750,7 +750,7 @@ function actualizarInformacionReservacion() {
             alert("Debes seleccionar una moto!");
         } else {
             $.ajax(
-                    'http://129.151.118.73/api/Reservation/update',
+                    'http://localhost/api/Reservation/update',
                     {
                         data: datosJson,
                         type: 'PUT',
@@ -775,7 +775,7 @@ function actualizarInformacionReservacion() {
 
 function eliminarRegistroReservacion(idReservacion) {
     $.ajax(
-            'http://129.151.118.73/api/Reservation/' + idReservacion,
+            'http://localhost/api/Reservation/' + idReservacion,
             {
                 type: 'DELETE',
                 dataType: 'json',
@@ -802,7 +802,7 @@ function limpiarCamposReservacion() {
 //Funciones para el manejo de la tabla ADMIN:
 function traerInformacionAdmin() {
     $.ajax({
-        url: 'http://129.151.118.73/api/Admin/all',
+        url: 'http://localhost/api/Admin/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -848,7 +848,7 @@ function guardarInformacionAdmin() {
     };
     let datosJson = JSON.stringify(datosAdmin);
     $.ajax(
-            'http://129.151.118.73/api/Admin/save',
+            'http://localhost/api/Admin/save',
             {
                 data: datosJson,
                 type: 'POST',
@@ -870,7 +870,7 @@ function guardarInformacionAdmin() {
 
 function editarRegistroAdmin(idAdmin) {
     $.ajax({
-        url: 'http://129.151.118.73/api/Admin/' + idAdmin,
+        url: 'http://localhost/api/Admin/' + idAdmin,
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -898,7 +898,7 @@ function actualizarInformacionAdmin() {
     };
     let datosJson = JSON.stringify(datosAdmin);
     $.ajax(
-            'http://129.151.118.73/api/Admin/update',
+            'http://localhost/api/Admin/update',
             {
                 data: datosJson,
                 type: 'PUT',
@@ -920,7 +920,7 @@ function actualizarInformacionAdmin() {
 
 function eliminarRegistroAdmin(idAdmin) {
     $.ajax(
-            'http://129.151.118.73/api/Admin/' + idAdmin,
+            'http://localhost/api/Admin/' + idAdmin,
             {
                 type: 'DELETE',
                 dataType: 'json',
@@ -946,7 +946,7 @@ function limpiarCamposAdmin() {
 //Funciones para el manejo de la tabla SCORE:
 function traerInformacionScore() {
     $.ajax({
-        url: 'http://129.151.118.73/api/Score/all',
+        url: 'http://localhost/api/Score/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -997,7 +997,7 @@ function guardarInformacionScore() {
         alert(".::ERROR::. Debes seleccionar una reservación!");
     } else {
         $.ajax(
-                'http://129.151.118.73/api/Score/save',
+                'http://localhost/api/Score/save',
                 {
                     data: datosJson,
                     type: 'POST',
@@ -1020,7 +1020,7 @@ function guardarInformacionScore() {
 
 function editarRegistroScore(idScore) {
     $.ajax({
-        url: 'http://129.151.118.73/api/Score/' + idScore,
+        url: 'http://localhost/api/Score/' + idScore,
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -1052,7 +1052,7 @@ function actualizarInformacionScore() {
         alert(".::ERROR::. Debes seleccionar una reservación!");
     } else {
         $.ajax(
-                'http://129.151.118.73/api/Score/update',
+                'http://localhost/api/Score/update',
                 {
                     data: datosJson,
                     type: 'PUT',
@@ -1075,7 +1075,7 @@ function actualizarInformacionScore() {
 
 function eliminarRegistroScore(idScore) {
     $.ajax(
-            'http://129.151.118.73/api/Score/' + idScore,
+            'http://localhost/api/Score/' + idScore,
             {
                 type: 'DELETE',
                 dataType: 'json',
@@ -1102,7 +1102,7 @@ function limpiarCamposScore() {
 function listarCategorias() {
 
     $.ajax({
-        url: 'http://129.151.118.73/api/Category/all',
+        url: 'http://localhost/api/Category/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -1127,7 +1127,7 @@ function listarCategorias() {
 
 function listarClientes() {
     $.ajax({
-        url: 'http://129.151.118.73/api/Client/all',
+        url: 'http://localhost/api/Client/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -1152,7 +1152,7 @@ function listarClientes() {
 
 function listarMotos() {
     $.ajax({
-        url: 'http://129.151.118.73/api/Motorbike/all',
+        url: 'http://localhost/api/Motorbike/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
@@ -1177,7 +1177,7 @@ function listarMotos() {
 
 function listarReservaciones() {
     $.ajax({
-        url: 'http://129.151.118.73/api/Reservation/all',
+        url: 'http://localhost/api/Reservation/all',
         type: 'GET',
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
